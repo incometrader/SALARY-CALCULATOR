@@ -1,10 +1,10 @@
-window.onload = function() {
+window.onload = () => {
   const worker = {
     Interns: 20,
     Associates: 40,
     Managers: 60,
     Executives: 100,
-    Directors: 200,
+    Directors: 180,
   };
 
   const salary = {
@@ -20,14 +20,11 @@ window.onload = function() {
   function displaySalary() {
     const select = document.getElementById('select');
     const employee = select.options[select.selectedIndex].text;
-    console.log(employee);
     const salaryArr = Object.keys(salary);
-    for (let salaryItem of salaryArr) {
+    salaryArr.forEach((salaryItem) => {
       let content = document.getElementById(salaryItem);
       content.textContent = worker[employee] * salary[salaryItem];
-    }
-    // let content = document.getElementById('basic');
-    // content.textContent = worker[employee] * salary.basic;
+    });
     const employeeHeader = document.getElementById('employee_header');
     employeeHeader.textContent = employee;
   }
@@ -49,9 +46,5 @@ function dispaly() {
       document.getElementById("view-report").style.display = "inline";
       document.getElementById("header").style.display = "inline";
     }
-  }
-
-
-
-
+}
 
