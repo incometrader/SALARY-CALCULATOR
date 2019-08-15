@@ -18,7 +18,7 @@ This project was developed using
 --HTML 
 --CSS
 --JAVASCRIPT
-
+-- Updated by Amycruz
 
 
 ##	*Prerequisites*
